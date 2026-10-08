@@ -1,0 +1,17 @@
+# Secrets — never commit a real API key
+.env
+.env.local
+.env*.local
+
+# Vercel
+.vercel
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# OS files
+.DS_Store
+Thumbs.db

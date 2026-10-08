@@ -1,0 +1,11 @@
+# Vercel (serverless) dependencies for POP Assistant.
+#
+# The heavy local OCR stack (rapidocr, onnxruntime, PyMuPDF) is intentionally
+# EXCLUDED: it exceeds Vercel's 250 MB unzipped function bundle limit and its
+# cold-start cost. On Vercel, image OCR is unavailable with a clear message;
+# text-based PDF extraction, manual entry, and optional Gemini AI extraction
+# all work without it. The full local version (with bundled OCR) is in the
+# POP-Assistant-Source-v3-Gemini.zip package.
+pypdf>=6.0,<7
+Pillow>=10,<13
+google-genai>=1.0,<2
